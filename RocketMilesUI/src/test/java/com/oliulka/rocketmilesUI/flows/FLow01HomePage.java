@@ -3,6 +3,7 @@ package com.oliulka.rocketmilesUI.flows;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,17 +15,30 @@ public class FLow01HomePage{
 
     private Page01HomePage page01;
      
- 	public FLow01HomePage(){
-	}
-
-    public void homePageBasicElementsFlow(WebDriver driver) 
+    
+    public void homePageBasicElementsFlow(WebDriver driver) throws InterruptedException 
     {
     	driver.get("https://www.rocketmiles.com/");
-    	WebElement homeLogo = page01.homepageAmazonLogo(driver);
-    	WebDriverWait wait = new WebDriverWait(driver, 30);
-    	wait.until(ExpectedConditions.visibilityOf(homeLogo));
-    	System.out.println("Home page was accessed successfully");
+    	Thread.sleep(10000);
+    	System.out.println("driver=" + driver); 
+    	//page01.homepageRocketMililesSignUpClose(driver).click();
+    	//page01.homepageRocketMililesCoockiesOK(driver).click();
+    	assertTrue(page01.homepageRocketMilesLogo(driver).isDisplayed());
+    	System.out.println("RocketMiles home page was loaded successfully");
 
-    	System.out.println("Home page elements were asserted successfully"); 
+    	System.out.println("RocketMiles home page was asserted successfully"); 
      }
+
+
+
+
+	public void WaitUtil(WebElement element, int seconds) throws InterruptedException
+	{
+		int count=0;
+		while (element.isDisplayed()==false && seconds<=count)
+		{
+			Thread.sleep(1000);
+			count++;
+		}
+	}
 }

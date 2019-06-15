@@ -13,8 +13,9 @@ public abstract class RocketMilesUIAbstractTest {
 	public void SetUpMethod()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\GIT\\New\\RocketMilesUI\\RocketMilesUI\\src\\test\\resources\\driver\\chromedriver.exe");
-		driver = (WebDriver) new ChromeDriver();
-   	 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver= new ChromeDriver();
+   	 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+   	 	System.out.println("driver=" + driver); 
 		System.out.println("Set Up Method is over");
 	}
 
