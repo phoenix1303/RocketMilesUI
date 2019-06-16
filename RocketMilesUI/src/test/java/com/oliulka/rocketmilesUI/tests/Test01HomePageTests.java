@@ -1,8 +1,10 @@
 package com.oliulka.rocketmilesUI.tests;
 
 import org.testng.annotations.Test;
+
 import com.oliulka.rocketmilesUI.RocketMilesUIAbstractTest;
 import com.oliulka.rocketmilesUI.flows.*;
+import com.oliulka.rocketmilesUI.pages.Page01HomePage;
 
 public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	

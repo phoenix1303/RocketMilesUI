@@ -12,17 +12,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.oliulka.rocketmilesUI.pages.Page01HomePage;
 
 public class FLow01HomePage{
-
-    private Page01HomePage page01;
-     
     
     public void homePageBasicElementsFlow(WebDriver driver) throws InterruptedException 
     {
+		Page01HomePage page01 = new Page01HomePage();
     	driver.get("https://www.rocketmiles.com/");
-    	Thread.sleep(10000);
-    	System.out.println("driver=" + driver); 
-    	//page01.homepageRocketMililesSignUpClose(driver).click();
-    	//page01.homepageRocketMililesCoockiesOK(driver).click();
+    	assertEquals(driver.getTitle(), "Rocketmiles - Book Hotels Earn Thousands of Frequent Flyer Miles");
+    	page01.homepageRocketMililesSignUpClose(driver).click();
+    	page01.homepageRocketMililesCoockiesOK(driver).click();
     	assertTrue(page01.homepageRocketMilesLogo(driver).isDisplayed());
     	System.out.println("RocketMiles home page was loaded successfully");
 
