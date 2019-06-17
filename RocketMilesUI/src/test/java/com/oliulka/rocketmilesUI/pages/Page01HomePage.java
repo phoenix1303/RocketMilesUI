@@ -73,11 +73,19 @@ public class Page01HomePage{
     }
     public WebElement homepageRocketMilesNumberOfGuests (WebDriver driver, int numberOfGuests)
     {
-    	return driver.findElement(By.xpath(" //a[text()='"+numberOfGuests+" Guest']"));
+    	return driver.findElement(By.cssSelector("div.adults ul.dropdown-menu> li:nth-child("+numberOfGuests+")"));
     }
     public WebElement homepageRocketMilesNuberOfRooms (WebDriver driver, int numberOfRooms)
     {
     	return driver.findElement(By.xpath(" //a[text()='"+numberOfRooms+" Guest']"));
+    } 
+    public WebElement homepageRocketMilesRewardsPredictions (WebDriver driver)
+    {
+    	return driver.findElement(By.cssSelector("div.program li.uib-typeahead-match"));
     }
+    public WebElement homepageRocketMilesSearchTransition (WebDriver driver)
+    {
+    	return driver.findElement(By.cssSelector("div.search-transition"));
+    } 
 	//------------------------------------End: Additional Elements showing up based on actions----------//
 }

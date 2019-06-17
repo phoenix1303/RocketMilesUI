@@ -21,8 +21,8 @@ public abstract class RocketMilesUIAbstractTest {
     	driver.get("https://www.rocketmiles.com/");
     	assertEquals(driver.getTitle(), "Rocketmiles - Book Hotels Earn Thousands of Frequent Flyer Miles");
     	System.out.println("RocketMiles home page was loaded successfully");
-    	driver.findElements(By.cssSelector("button.btn.cookie-banner-button"));
-    	driver.findElements(By.cssSelector("div#new-sign-up-modal button.close"));
+    	driver.findElement(By.cssSelector("button.btn.cookie-banner-button")).click();
+    	driver.findElement(By.cssSelector("div#new-sign-up-modal button.close")).click();
 		System.out.println("Set Up Method is over");
 	}
 
