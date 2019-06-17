@@ -25,9 +25,7 @@ public class Utilities {
 				count++;
 			}
 		} catch(StaleElementReferenceException e)
-		{
-			System.out.println("Element no longer visible");
-		}
+		{}
 
 	}
 

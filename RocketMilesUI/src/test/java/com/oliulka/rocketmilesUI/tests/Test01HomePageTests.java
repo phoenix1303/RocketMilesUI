@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.oliulka.rocketmilesUI.RocketMilesUIAbstractTest;
 import com.oliulka.rocketmilesUI.flows.FLow01HomePage;
+import com.oliulka.rocketmilesUI.flows.FLow02SearchResults;
 
 public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	
@@ -19,6 +20,8 @@ public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	public void Tes01SearchForHotels() throws InterruptedException
 	{
 		FLow01HomePage flow01 = new FLow01HomePage();
+		FLow02SearchResults flow02 = new FLow02SearchResults();
 		flow01.searchForHotel(driver, "Barcelona", "Amazon.com Gift Card", null, null, 2, 1);	
+		flow02.assertingSearchResults(driver);
 	}
 }
