@@ -21,7 +21,7 @@ public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	{
 		FLow01HomePage flow01 = new FLow01HomePage();
 		FLow02SearchResults flow02 = new FLow02SearchResults();
-		flow01.searchForHotel(driver, "Barcelona", "Amazon.com Gift Card", null, null, 2, 1);	
-		flow02.assertingSearchResults(driver);
+		flow01.searchForHotel(driver, "Barcelona", "Amazon.com Gift Card", "2019/5/29", "2019/5/30", 2, 1);	
+		flow02.assertingSearchResults(driver, "Barcelona", "Amazon.com Gift Card", "2019/5/29", "2019/5/30", 2, 1);
 	}
 }
