@@ -77,7 +77,7 @@ public class Page01HomePage{
     }
     public WebElement homepageRocketMilesNuberOfRooms (WebDriver driver, int numberOfRooms)
     {
-    	return driver.findElement(By.xpath(" //a[text()='"+numberOfRooms+" Guest']"));
+    	return driver.findElement(By.cssSelector("div.rooms ul.dropdown-menu> li:nth-child("+numberOfRooms+")"));
     } 
     public WebElement homepageRocketMilesRewardsPredictions (WebDriver driver)
     {
