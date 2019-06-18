@@ -32,8 +32,9 @@ public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	{
 		FLow01HomePage flow01 = new FLow01HomePage();
 		FLow02SearchResults flow02 = new FLow02SearchResults();
-		flow01.searchForHotel(driver, "Austin", "United MileagePlus", "2019/5/28", "2019/5/29", 3, 2);	
-		flow02.assertingSearchResults(driver, "Austin", "United MileagePlus", "2019/5/28", "2019/5/29", 3, 2);
+		String futuredate = Utilities.futureDate(1);
+		flow01.searchForHotel(driver, "Austin", "United MileagePlus", todayDate, futuredate, 3, 2);	
+		flow02.assertingSearchResults(driver, "Austin", "United MileagePlus", todayDate, futuredate, 3, 2);
 	}
 	
 	@Test(enabled = true)
@@ -41,8 +42,9 @@ public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	{
 		FLow01HomePage flow01 = new FLow01HomePage();
 		FLow02SearchResults flow02 = new FLow02SearchResults();
-		flow01.searchForHotel(driver, "Chicago", "American Express Membership Rewards", "2019/5/28", "2019/5/29", 4, 3);	
-		flow02.assertingSearchResults(driver, "Chicago", "American Express Membership Rewards", "2019/5/28", "2019/5/29", 4, 3);
+		String futuredate = Utilities.futureDate(2);
+		flow01.searchForHotel(driver, "Chicago", "American Express Membership Rewards", todayDate, futuredate, 4, 3);	
+		flow02.assertingSearchResults(driver, "Chicago", "American Express Membership Rewards", todayDate, futuredate, 4, 3);
 	}
 	
 	@Test(enabled = true)
@@ -50,7 +52,8 @@ public class Test01HomePageTests extends RocketMilesUIAbstractTest {
 	{
 		FLow01HomePage flow01 = new FLow01HomePage();
 		FLow02SearchResults flow02 = new FLow02SearchResults();
-		flow01.searchForHotel(driver, "Miami", "Asia Miles", "2019/5/28", "2019/5/29", 1, 2);	
-		flow02.assertingSearchResults(driver, "Miami", "Asia Miles", "2019/5/28", "2019/5/29", 1, 2);
+		String futuredate = Utilities.futureDate(3);
+		flow01.searchForHotel(driver, "Miami", "Asia Miles", todayDate, futuredate, 1, 2);	
+		flow02.assertingSearchResults(driver, "Miami", "Asia Miles", todayDate, futuredate, 1, 2);
 	}
 }
