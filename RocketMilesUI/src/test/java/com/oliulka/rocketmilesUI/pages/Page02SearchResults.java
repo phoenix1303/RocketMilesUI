@@ -1,5 +1,7 @@
 package com.oliulka.rocketmilesUI.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +13,10 @@ public class Page02SearchResults{
 	public WebElement resultsPageDestination (WebDriver driver)
     {
     	return driver.findElement(By.cssSelector("div.search-summary-container-transparent> span> var:nth-child(3)"));
+    }
+	public List <WebElement> resultsPagaRewardProgramLogo (WebDriver driver)
+    {
+    	return driver.findElements(By.cssSelector("img.reward-program-logo"));
     }
     public WebElement resultsPageDates (WebDriver driver)
     {
