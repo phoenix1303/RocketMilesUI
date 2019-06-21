@@ -17,13 +17,14 @@ public abstract class RocketMilesUIAbstractTest {
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\GIT\\New\\RocketMilesUI\\RocketMilesUI\\src\\test\\resources\\driver\\chromedriver.exe");
 		driver= new ChromeDriver();
-   	 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// Disabled implicit wait for now
+   	 	//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.get("https://www.rocketmiles.com/");
     	assertEquals(driver.getTitle(), "Rocketmiles - Book Hotels Earn Thousands of Frequent Flyer Miles");
-    	System.out.println("RocketMiles home page was loaded successfully");
+    	System.out.println("[LOGGING]---------RocketMiles home page was loaded successfully");
     	driver.findElement(By.cssSelector("button.btn.cookie-banner-button")).click();
     	driver.findElement(By.cssSelector("div#new-sign-up-modal button.close")).click();
-		System.out.println("Set Up Method is over");
+		System.out.println("[LOGGING]---------Set Up Method is over");
 	}
 
 	@AfterMethod

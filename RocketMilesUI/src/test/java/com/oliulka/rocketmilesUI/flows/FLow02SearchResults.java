@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 import com.oliulka.rocketmilesUI.pages.Page02SearchResults;
 import com.oliulka.rocketmilesUI.util.Utilities;
 
-public class FLow02SearchResults{
-    
+public class FLow02SearchResults {
     
     public void assertingSearchResults(WebDriver driver, String destination, String rewardsProgram, String CheckInDate, String CheckOutDate,
     		int NumberOfGuests, int NumberOfRooms) throws InterruptedException 
@@ -32,8 +31,10 @@ public class FLow02SearchResults{
       	    newTab.remove(resultsTab);
           	System.out.println("[LOGGING]---------Switching to new result tab with result");
       	    driver.switchTo().window(newTab.get(0));
-      	    if(driver.getCurrentUrl().contains("www.rocketmiles.com"))
-      	    {		
+      	    System.out.println("[LOGGING]---------Continue testing if site is rocketmiles and hotel has availability");
+      	    Thread.sleep(3000);
+      	    if(driver.getCurrentUrl().contains("www.rocketmiles.com") && page02.resultsPageSpecificResultReturnBackLinkNoAvailability(driver).size()==0)
+      	    {	
 	      	    util.WaitForElementVisible(page02.resultsPageSpecificResultCheckInDate(driver), 30);
 	      	    System.out.println("[LOGGING]---------Asserting result for following hotel - "+driver.getTitle().replaceAll("Rocketmiles - Hotel details:", ""));
 	      	    assertTrue(page02.resultsPageSpecificResultCheckInDate(driver).getText().contains(util.transformDate(CheckInDate)));
@@ -52,11 +53,6 @@ public class FLow02SearchResults{
       	    }
       	    driver.close();
       	    driver.switchTo().window(resultsTab);
-      	}
-      	
-      	
-    	
+      	}  	
      }
-
-
 }

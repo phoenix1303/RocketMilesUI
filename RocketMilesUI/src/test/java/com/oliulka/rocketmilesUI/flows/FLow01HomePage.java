@@ -3,15 +3,13 @@ package com.oliulka.rocketmilesUI.flows;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import com.oliulka.rocketmilesUI.pages.Page01HomePage;
 import com.oliulka.rocketmilesUI.util.Utilities;
-public class FLow01HomePage{
+
+public class FLow01HomePage {
 	    
     public void homePageBasicElementsFlow(WebDriver driver) throws InterruptedException 
     {

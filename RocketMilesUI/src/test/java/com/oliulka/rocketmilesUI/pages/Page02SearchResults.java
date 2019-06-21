@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class Page02SearchResults{
 	
-	//----------------------------------Start: SetUp Elements---------------------------------------------//
+	//----------------------------------Start: Results Page Elements---------------------------------------------//
     
 	public WebElement resultsPageDestination (WebDriver driver)
     {
@@ -30,8 +30,9 @@ public class Page02SearchResults{
     {
     	return driver.findElement(By.cssSelector("div.hotel-result-container div.hotel-result:nth-child("+i+")"));
     }
-  
-	//----------------------------------Start: Default View Elements--------------------------------------//
+    
+	//----------------------------------End: Results Page Elements----------------------------------------//
+	//----------------------------------Start: Specific hotel Elements------------------------------------//
     public  WebElement resultsPageSpecificResultCheckInDate (WebDriver driver)
     {
     	return driver.findElement(By.xpath("//div[@class='rm-sidebar']/div[position()=1]/div[contains(@class, 'trip-date')]"));
@@ -48,5 +49,10 @@ public class Page02SearchResults{
     {
     	return driver.findElement(By.xpath("//div[@class='rm-sidebar']/div[position()=5]/div[contains(@class, 'value')]"));
     }
+    public  List <WebElement> resultsPageSpecificResultReturnBackLinkNoAvailability (WebDriver driver)
+    {
+    	return driver.findElements(By.cssSelector("div.category-error a.return-btn"));
+    }
+	//----------------------------------End: Specific hotel Elements--------------------------------------//
    
 }

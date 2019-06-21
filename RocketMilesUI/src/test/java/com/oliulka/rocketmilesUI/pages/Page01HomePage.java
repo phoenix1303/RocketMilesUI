@@ -1,7 +1,5 @@
 package com.oliulka.rocketmilesUI.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +16,7 @@ public class Page01HomePage{
     {
     	return driver.findElement(By.cssSelector("div#new-sign-up-modal button.close"));
     }
-	
+	//----------------------------------End: SetUp Elements-----------------------------------------------//
 	//----------------------------------Start: Default View Elements--------------------------------------//
 	
     public WebElement homepageRocketMilesLogo (WebDriver driver)
