@@ -13,6 +13,8 @@ Please make sure you have following elements installed to be able to run the sol
  RocketMilesUI\src\test\java\com\oliulka\rocketmilesUI and update path to the WebDriver in System.setProperty.  
  After that you should be able to Clean the project - select Project in menu of Eclipse/Clean and specify RocketmilesIU, after that you should be able to run the solution.
  
+ If you ever have issues with imports or other errors in the code please try to clean the project, to do that got to Project menu -> Clean and select necessary project.
+ 
  Tests could be ran individually as well as in bulk from Test01HomePageTests class.
  To run a specific test please doubleclick the name of the test (method with @Test annotation) and select Run As -> TestNG test.
  To run all of the tests please doubleclick class name (Test01HomePageTests) and select Run As -> TestNG test.
