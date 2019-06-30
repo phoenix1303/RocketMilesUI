@@ -32,7 +32,7 @@ public class FLow01HomePage {
     {
 		Page01HomePage page01 = new Page01HomePage();
 		Utilities util = new Utilities();
-    	assertEquals(page01.homepageRocketMilesTetUnderLogo(driver).getText(), "Book hotels. Earn rewards.");
+    	assertEquals(page01.homepageRocketMilesTetUnderLogo(driver).getText(), "Book hotels. Earn thousands of miles or points per night.");
     	System.out.println("[LOGGING]---------Searching for vacation in - "+destination);
     	page01.homepageRocketMilesDestinationInput(driver).sendKeys(destination);
     	Thread.sleep(2000);

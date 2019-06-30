@@ -55,7 +55,17 @@ public class Utilities {
 			currentMonth = "Jun";
 			//this can be implemented for each month using switch statement
 		}
-		String newDateFormat = currentMonth+" "+date.substring(date.length()-2)+", "+date.substring(0, 4);
+		if(date.contains("/07/"))
+		{
+			currentMonth = "Jul";
+			//this can be implemented for each month using switch statement
+		}
+		String Day = date.substring(date.length()-2);
+		if(Day.startsWith("0"))
+		{
+			Day = Day.substring(1);
+		}
+		String newDateFormat = currentMonth+" "+Day+", "+date.substring(0, 4);
 		return newDateFormat.replaceAll("/", "");
 	}
 

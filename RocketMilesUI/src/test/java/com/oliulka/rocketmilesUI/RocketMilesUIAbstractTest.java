@@ -15,10 +15,11 @@ public abstract class RocketMilesUIAbstractTest {
 	@BeforeMethod
 	public void SetUpMethod()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\GIT\\New\\RocketMilesUI\\RocketMilesUI\\src\\test\\resources\\driver\\chromedriver.exe");
+		///Users/oliulka/GIT/RocketmilesUI/RocketMilesUI/chromedriver
+		System.setProperty("webdriver.chrome.driver", "/Users/oliulka/GIT/RocketmilesUI/RocketMilesUI/chromedriver");
 		driver= new ChromeDriver();
 		// Disabled implicit wait for now
-   	 	//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   	 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     	driver.get("https://www.rocketmiles.com/");
     	assertEquals(driver.getTitle(), "Rocketmiles - Book Hotels Earn Thousands of Frequent Flyer Miles");
     	System.out.println("[LOGGING]---------RocketMiles home page was loaded successfully");

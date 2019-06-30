@@ -25,7 +25,7 @@ public class Page01HomePage{
     } 
     public WebElement homepageRocketMilesTetUnderLogo (WebDriver driver)
     {
-    	return driver.findElement(By.cssSelector("h3.text-center"));
+    	return driver.findElement(By.cssSelector("h2.text-center"));
     } 
     public WebElement homepageRocketMilesDestinationInput (WebDriver driver)
     {
